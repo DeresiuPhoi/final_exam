@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    h1 { color: #333; }
+    ul { list-style: none; padding: 0; }
+    li { border-bottom: 1px solid #ccc; padding: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Articles</h1>
+  <ul id="articles-list">
+    
+  </ul>
+
+  <script>
+    // Fetch the JSON file and display articles
+    fetch('Articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const articlesList = document.getElementById('articles-list');
+        data.articles.forEach(article => {
+          const articleItem = document.createElement('li');
+          articleItem.innerHTML = `
+            <h2>${article.title}</h2>
+            <p>ID: ${article.id}</p>
+            <p>${article.content}</p>
+          `;
+          articlesList.appendChild(articleItem);
+        });
+      })
+      .catch(error => console.error('Error fetching articles:', error));
+  </script>
+</body>
+</html>
