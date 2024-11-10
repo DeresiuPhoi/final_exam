@@ -1,0 +1,224 @@
+body, .navbar, .btn-secondary, .card, .article, .sidebar-article, .navbar .nav-link, .dashboard-container, 
+.sort-toggle-wrapper select, #theme-toggle, .news-dashboard-title, .theme-footer, .modal-content, 
+.footer-link, .footer-follow, .footer-icon {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Most Popular Article Card Styling */
+.most-popular-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.most-popular-card .card-body {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+}
+
+
+/* Light Theme (Default) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Navbar Light Theme */
+.navbar-light {
+    background-color: #f8f9fa !important;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar and Dashboard Titles */
+.news-dashboard-title, .navbar-light .nav-link, .sort-toggle-wrapper select {
+    color: #333 !important;
+}
+.navbar-light .nav-link:hover {
+    color: #007bff;
+}
+
+/* Dashboard Containers and Cards - Light Theme */
+.dashboard-container, .card, .article, .sidebar-article {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+/* Sort Toggle Styling */
+.sort-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.sort-toggle-wrapper select {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.sort-toggle-wrapper select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Theme Toggle Button - Light Theme */
+#theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+/* Navbar Dark Theme */
+body.dark-theme .navbar-light {
+    background-color: #333 !important;
+}
+body.dark-theme .navbar-light .nav-link, 
+body.dark-theme .sort-toggle-wrapper select,
+body.dark-theme .news-dashboard-title {
+    color: #e0e0e0 !important;
+}
+body.dark-theme .navbar-light .nav-link:hover {
+    color: #ff5c5c;
+}
+
+/* Dashboard Containers and Cards - Dark Theme */
+body.dark-theme .dashboard-container, 
+body.dark-theme .card, 
+body.dark-theme .article, 
+body.dark-theme .sidebar-article {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+/* Sort Toggle Styling for Dark Theme */
+body.dark-theme .sort-toggle-wrapper select {
+    background-color: #333;
+    color: #e0e0e0 !important;
+    border: 1px solid #444;
+}
+body.dark-theme .sort-toggle-wrapper select:focus {
+    border-color: #ff5c5c;
+    outline: none;
+}
+
+/* Theme Toggle Button - Dark Theme */
+body.dark-theme #theme-toggle {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #ccc;
+}
+body.dark-theme #theme-toggle:hover {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #ffffff;
+    color: #333333;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+body.dark-theme .modal-content {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+/* Modal Close Button Styling */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff5c5c; /* Red background */
+    border: none;
+    color: #ffffff; /* White text */
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background-color: #ff7878; /* Slightly lighter red on hover */
+}
+
+/* Dark Theme - Modal Close Button */
+body.dark-theme .modal-close-btn {
+    background: #ff5c5c; /* Red background for dark theme */
+    color: #ffffff; /* White text */
+}
+
+body.dark-theme .modal-close-btn:hover {
+    background-color: #ff7878; /* Lighter red on hover */
+}
+
+
+/* Footer Styling */
+.theme-footer {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+.theme-footer .footer-link, 
+.theme-footer .footer-follow, 
+.theme-footer .footer-icon {
+    color: inherit;
+}
+.theme-footer .footer-link:hover, 
+.theme-footer .footer-icon:hover {
+    color: #007bff;
+}
+body.dark-theme .theme-footer {
+    background-color: #222222 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-theme .theme-footer .footer-link, 
+body.dark-theme .theme-footer .footer-follow, 
+body.dark-theme .theme-footer .footer-icon {
+    color: inherit;
+}
+body.dark-theme .theme-footer .footer-link:hover, 
+body.dark-theme .theme-footer .footer-icon:hover {
+    color: #ff5c5c;
+}
